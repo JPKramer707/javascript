@@ -1,0 +1,88 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kDialog Demo
+		</title>
+		<style>
+			@import url('css/kDialog.css');
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/scriptaculous.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/EventSelectors.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kDialog.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				var dialog = null;
+				EventSelectors.register({
+					'a:click': function(el, e) {
+						dialog = new kDialog({
+							title: 'kDialog Demo',
+							content: '<p>This is the content of the dialog box. It says things.</p><p>Drag the dialog box anywhere you want it (using the titlebar as a handle)</p>',
+							draggable: true,
+							posAnchor: 'top left',
+							forceVisible: false,
+							relativeTo: el,
+							posx: 100,
+							posy: 0
+						});
+					},
+					'input.save:click': function(el, e) {
+						// Saves changed settings into the dialog
+						if (dialog) {
+							dialog.set('title', document.getElementsByName('title')[0].value);
+							dialog.set('content', document.getElementsByName('content')[0].value);
+						} else {
+							alert('First open the dialog, then save your changes.');
+						}
+					},
+					'input.posx:change': function(el, e) {
+						// Saves changed location into the dialog
+						if (dialog) {
+							dialog.set('posx', document.getElementsByName('posx')[0].value);
+						} else {
+							alert('First open the dialog, then move it.');
+						}
+					},
+					'input.posy:change': function(el, e) {
+						// Saves changed location into the dialog
+						if (dialog) {
+							dialog.set('posy', document.getElementsByName('posy')[0].value);
+						} else {
+							alert('First open the dialog, then move it.');
+						}
+					},
+					'input.posAnchor:change': function(el, e) {
+						if (dialog) {
+							dialog.set('posAnchor', document.getElementsByName('posAnchor')[0].value);
+						} else {
+							alert('First open the dialog, then re-anchor it.');
+						}
+					}
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kDialog Demo</h1>
+		<p>kDialog now sports a "LightBox" feature, which locks interaction with the page, and visually fades it until kDialog is hidden.</p>
+		<a href="javascript:void(0);">Open A Dialog</a>
+		<form>
+			<h2>You can alter the dialog's content dynamically - demo below</h2>
+			<div>Title: <input name="title" /></div>
+			<div>Content: <textarea name="content"></textarea></div>
+			<div><input type="button" name="save" value="save" class="save" /></div>
+		</form>
+		<form>
+			<h2>You can also move the dialog from an external script - try it.</h2>
+			<div>X Position: <input name="posx" class="posx" value="0" />px</div>
+			<div>Y Position: <input name="posy" class="posy" value="0" />px</div>
+			<div>posAnchor: <input name="posAnchor" class="posAnchor" value="top left" />(top|middle|bottom) (left|center|right)</div>
+			<div><input type="button" name="move" value="move" class="move" /></div>
+		</form>
+	</body>
+</html>

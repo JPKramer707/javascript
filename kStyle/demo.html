@@ -1,0 +1,87 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kStyle Demo
+		</title>
+		<style>
+			@import url('css/style.css');
+		</style>
+		<script type="text/javascript" language="javascript1.2" src="js/kStyle.js"></script>
+		<script type="text/javascript" language="javascript1.2">
+			<!--
+				colorIndex = 0;
+				setInterval(function() {
+					colors = ['FF0000', 'FF1F1F', 'FF3F3F', 'FF5F5F', 'FF7F7F', 'FF9F9F', 'FFBFBF', 'FFDFDF', 'FFDFDF', 'FFBFBF', 'FF9F9F', 'FF7F7F', 'FF5F5F', 'FF3F3F', 'FF1F1F'];
+					if (colorIndex >= colors.length) colorIndex = 0;
+					kStyle.getRuleBySelector('a').style.color = '#'+colors[colorIndex++];
+				}, 100);
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kStyle Demo</h1>
+		<p>
+			kStyle provides an easy interface to alter CSS styles, rather than just the style given
+			on an element. This lets you make page-wide changes with a single stroke. For example,
+			all links in this page are flashing (or should be.) This is not accomplished by finding
+			every link in the page, remembering it, and looping through them to set their colors in
+			unison. Rather, this is done simply by hooking into the CSS selector that points to them,
+			and changing one of its rules.
+		</p>
+		<p>
+			The theory is that this will speed up your script considerably, since more of the work
+			is offloaded to native browser code.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetuer
+			adipiscing elit. Curabitur commodo, urna ut
+			elementum tincidunt, lacus ipsum scelerisque orci,
+			quis <a href="javascript:void(0);">rutrum</a> lorem odio non massa. Aenean pede
+			libero, posuere at, vehicula ut, semper et, est.
+			Donec scelerisque nisi at nibh. Proin ultricies
+			faucibus est. Cras sed est. Sed porttitor urna <a href="javascript:void(0);">non</a>
+			diam. Nunc sed turpis. Aliquam volutpat, dolor
+			eget facilisis facilisis, elit magna cursus nisi,
+			et dapibus sem ligula nec eros. <a href="javascript:void(0);">Maecenas</a> nec nisl.
+			Maecenas volutpat iaculis massa. Pellentesque vel
+			neque. Lorem ipsum dolor sit amet, consectetuer
+			adipiscing elit. Nulla eget risus. Proin semper
+			dui pretium nulla. Curabitur elit. Sed venenatis
+			mi a lectus tempor sodales. Vestibulum posuere
+			porta libero. Suspendisse potenti. Morbi tempus
+			auctor turpis. Nullam ut lectus.
+		</p>
+
+		<p>
+			Ut lectus dolor, tincidunt nec, rutrum ut,
+			facilisis id, tortor. <a href="javascript:void(0);">Quisque</a> ac massa a lacus
+			bibendum placerat. Vivamus <a href="javascript:void(0);">sollicitudin</a> dolor sed
+			lectus. Nullam eget velit. <a href="javascript:void(0);">Curabitur</a> <a href="javascript:void(0);">aliquam</a>
+			condimentum ante. Quisque iaculis cursus tortor.
+			Pellentesque tincidunt. Nulla id turpis ac enim
+			hendrerit porttitor. Lorem ipsum dolor sit amet,
+			consectetuer adipiscing elit. Aenean vitae ipsum.
+			Mauris scelerisque, magna vitae ultrices nonummy,
+			libero velit molestie nulla, vel hendrerit enim
+			pede ut purus. Nullam tempor placerat massa.
+			Aliquam erat volutpat.
+		</p>
+
+		<p>
+			Donec pellentesque. Fusce sapien. Vestibulum
+			lobortis sem ac nisl. Cras nisl enim, porttitor
+			vel, suscipit vel, pellentesque eget, purus.
+			Aliquam adipiscing dui id eros. Maecenas vitae
+			lacus. Cras orci. <a href="javascript:void(0);">Phasellus</a> eget urna. Aliquam
+			sollicitudin semper augue. Vestibulum blandit.
+			Nullam quis enim. Integer in odio. Nam mattis
+			mattis urna. Suspendisse vel nunc. <a href="javascript:void(0);">Pellentesque</a>
+			nec orci. Cum sociis natoque penatibus et magnis
+			dis parturient montes, nascetur ridiculus mus.
+		</p>
+	</body>
+</html>

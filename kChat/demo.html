@@ -1,0 +1,89 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kChat Demo
+		</title>
+		<style>
+			@import url('css/kChat.css');
+		</style>
+		<script type="text/javascript" language="javascript1.2" src="js/behaviour.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/kChat.js"></script>
+		<script type="text/javascript" language="javascript1.2">
+			<!--
+				Behaviour.addLoadEvent(function() {
+					new kChat({
+						n_statements: document.getElementsByTagName('dl')[0],
+						n_users: document.getElementsByTagName('ul')[0],
+						n_input: document.getElementsByTagName('input')[0],
+						n_lobby: document.getElementsByTagName('div')[0],
+						n_chat: document.getElementsByTagName('div')[1]
+					});
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kChat Demo</h1>
+		<p>An AJAX chat implementation. Requires extensive server-side support. The server-side of this AJAX app
+		was originally written by <a href="mailto:damien@solutionset.com?subject=CSP+Chat">Damien Filiatrault</a>.</p>
+		<div>
+			<h1>Awaiting Leader</h1><p>Leader must start chat.</p>
+			<!--kChat:stateButton-->
+		</div>
+		<div>
+			<!-- kChat:state=chat; -->
+			<dl>
+				<dt class="priv_user">
+					Homer:
+					<!--
+						kChat:uid=42;
+						kChat:time=348298892;
+						kChat:id=322;
+					-->
+				</dt>
+				<dd class="priv_user">I have nothing to say.</dd>
+				<dt class="priv_admin">
+					Bart:
+					<!--
+						kChat:uid=31;
+						kChat:time=348258892;
+						kChat:id=323;
+					-->
+				</dt>
+				<dd class="priv_admin">You're wrong.</dd>
+			</dl>
+			<ul>
+				<li class="priv_user">
+					Homer
+					<!--
+						kChat:username=Homer;
+						kChat:uid=42;
+						kChat:privilege=user;
+						kChat:arriveTime=348388222;
+					-->
+				</li>
+				<li class="priv_admin">
+					Bart
+					<!--
+						kChat:username=Bart;
+						kChat:uid=31;
+						kChat:privilege=admin;
+						kChat:me=true;
+						kChat:arriveTime=348388222;
+					-->
+				</li>
+			</ul>
+			<form action="ajax.php">
+				<input class="text" type="text" name="statement" />
+				<input type="submit" value="Speak" />
+				<!--kChat:stateButton-->
+			</form>
+		</div>
+	</body>
+</html>

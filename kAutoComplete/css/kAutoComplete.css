@@ -1,0 +1,32 @@
+ul {
+	border:             inset 2px;
+	list-style-type:    none;
+	padding:            0;
+	margin:             0;
+}
+ul.kAutoComplete {
+	position:           absolute;
+	max-height:         200px;
+	height:             expression(this.scrollHeight > 200? "200px" : "auto" );
+	display:            none;
+	background:         #fff;
+}
+ul.kAutoComplete li {
+	cursor:             pointer;
+	padding:            1px;
+	padding-left:       4px;
+	margin-right:       9px;
+}
+ul.kAutoComplete li:hover,
+ul.kAutoComplete li.highlight {
+	background-color:   #0A246A;
+	color:              #fff;
+}
+input.kAutoComplete {
+	padding:            1px;
+	padding-right:      16px;
+	background:         none;
+}
+input.kAutoComplete.pleaseWait {
+	background:         url('../i/throbber.gif') right no-repeat;
+}

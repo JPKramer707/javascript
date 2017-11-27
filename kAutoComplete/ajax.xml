@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE wordList [
+  <!ELEMENT word   (#PCDATA)>
+]>
+<wordList>
+	<word>WordOne</word>
+	<word>WordTwo</word>
+	<word>WordThree</word>
+	<word>These are words</word>
+</wordList>

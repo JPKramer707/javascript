@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>EFI - Print MIS Download Registration</title>
+		<script type="text/javascript" language="javascript" src="./js/prototype.js"></script>
+		<script type="text/javascript" language="javascript" src="./js/EventSelectors.js"></script>
+		<script type="text/javascript" language="javascript" src="./js/kConditionalInput.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+		  <!--
+				EventSelectors.register({
+					'.conditional' : function(el)	{
+						new InputCondition({
+							n_conditional: el,
+							n_hider: document.getElementById('hider'),
+							conditions: {
+								'default': false,
+								yes: true
+							}
+						});
+					}
+				});
+		  //-->
+		</script>
+	</head>
+	<body id="form" class="twoCol" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+			<form action="http://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="post" name="abc_workflow" onsubmit="return validateForm(this, false, false, false, true, 16);">
+				<table class="form" border="0" cellpadding="0" cellspacing="0">
+					<tbody>
+					<tr>
+						<th><label for="00N00000006mFVx"><span class="required">*</span>Would you like to be contacted by an EFI Representative?:</label></th>
+						<td><select name="00N00000006mFVx" id="00N00000006mFVx" emsg="Please let us know if you would like to be contacted by an EFI Representative" class="select conditional" alt="select">
+								<option value="N/A">N/A</option>
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+							</select></td>
+					</tr>
+					<tr id="hider">
+						<th><label for="description"><span class="required">*</span>Would you like to receive a hard copy version of this booklet?:</label></th>
+						<td><select name="description" id="description" emsg="Please let us know if you would like to receive a hard copy version of this booklet" class="select" alt="select">
+								<option value="N/A">N/A</option>
+							<option value="yes please send me a hard copy ABC s of Print MIS booklet">Yes</option>
+							<option value="no I prefer to download ABC s of Print MIS booklet">No</option>
+							</select></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>

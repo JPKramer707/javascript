@@ -1,0 +1,39 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kToolTip Demo
+		</title>
+		<style>
+			@import url('css/kToolTIp.css');
+		</style>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/behaviour.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/HID.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/kToolTip.js"></script>
+		<script type="text/javascript" language="javascript1.2">
+			<!--
+				Behaviour.addLoadEvent(function() {
+					ToolTip.create({
+						el: document.getElementsByTagName('input')[0],
+						content: 'First and Last name please'
+					});
+					ToolTip.create({
+						el: document.getElementsByTagName('h1')[0],
+						content: 'This is a <b>heading</b>.'
+					});
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kToolTip Demo</h1>
+		<form>
+			Name: <input type="text" /> (mouseover input for a tooltip)
+		</form>
+	</body>
+</html>

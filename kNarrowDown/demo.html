@@ -1,0 +1,60 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kNarrowDown Demo
+		</title>
+		<style>
+			@import url('css/kNarrowDown.css');
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/DOM.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/EventSelectors.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kNarrowDown.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				window.onload = function() {
+					new kNarrowDown({
+						selects: [
+							document.getElementsByName('make')[0],
+							document.getElementsByName('model')[0]
+						]
+					});
+				};
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kNarrowDown Demo</h1>
+		<form>
+			<label for="make">Make:</label>
+			<select id="make" style="width: 105px;" name="make">
+				<option value="All">All</option>
+				<option value="honda">Honda</option>
+				<option value="toyota">Toytota</option>
+				<option value="ford">Ford</option>
+			</select>
+
+			<label for="model">Model:</label>
+			<select id="make" style="width: 205px;" name="model">
+				<option value="" class="{showIf=make=honda|All}">Civic</option>
+				<option value="" class="{showIf=make=honda|All}">Civic Hybrid</option>
+				<option value="" class="{showIf=make=honda|All}">Accord</option>
+
+				<option value="" class="{showIf=make=toyota|All}">Prius</option>
+				<option value="" class="{showIf=make=toyota|All}">Avalon</option>
+				<option value="" class="{showIf=make=toyota|All}">Camry</option>
+				<option value="" class="{showIf=make=toyota|All}">Corolla</option>
+
+				<option value="" class="{showIf=make=ford|All}">Crown Victoria</option>
+				<option value="" class="{showIf=make=ford|All}">Explorer</option>
+				<option value="" class="{showIf=make=ford|All}">Freestar</option>
+				<option value="" class="{showIf=make=ford|All}">Expedition</option>
+			</select>
+		</form>
+	</body>
+</html>

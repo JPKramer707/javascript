@@ -1,0 +1,104 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kDynamicTable Demo
+		</title>
+		<style>
+			@import url('css/kDynamicTable.css');
+
+			table {
+				border-collapse: collapse;
+				font-family: arial, helvetica, sans-serif;
+				width: 100%;
+				font-size: 12px;
+			}
+			table thead tr {
+				border: 1px solid;
+				border-color: threedlightshadow threeddarkshadow threeddarkshadow threedlightshadow;
+			}
+			table thead tr th {
+				border: 1px solid;
+				border-color: threedhighlight threedshadow threedshadow threedhighlight;
+				background: threedface;
+				padding: 0 5px;
+				color: ButtonText;
+			}
+			table thead tr th.sort {
+				background: #77C7EF;
+				background-position: center right;
+				background-repeat: no-repeat;
+			}
+			table thead tr th.sort.ascending {
+				background-image: url('./i/sortup.gif');
+			}
+			table thead tr th.sort.descending {
+				background-image: url('./i/sortdown.gif');
+			}
+			table thead tr th div.border {
+				cursor: w-resize;
+			}
+			table tbody tr td {
+				border: 1px solid #ccc;
+				border-top: 0;
+				color: AppWorkspace;
+			}
+
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/EventSelectors.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kDynamicTable.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kHID.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				EventSelectors.addLoadEvent(function() {
+					new kDynamicTable({
+						table: document.getElementsByTagName('table')[0]
+					});
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kDynamicTable Demo</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Gender</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Kramer</td>
+					<td>26</td>
+					<td>M</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>John</td>
+					<td>35</td>
+					<td>M</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Lisette</td>
+					<td>15</td>
+					<td>F</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Sarxdin</td>
+					<td colspan="2">15/f/ca</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <title>
+      DOM.js Demo
+    </title>
+		<script type="text/javascript" language="javascript1.5" src="./DOM.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="./prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="./prototype_ss.js"></script>
+		<style>
+			span.elementData {
+				display: none;
+			}
+			pre {
+				border: inset;
+			}
+		</style>
+  </head>
+  <body id="target">
+		<span class="elementData">
+			value=This is the value of the comment Data
+		</span>
+
+		<h1>DOM.js Demo</h1>
+		<h2>DOM.getElementData(flagText, within)</h2>
+		<p>(Replaces the more semantic-friendly DOM.getCommentData() when Safari support is vital)</p>
+		<a href="#" onclick="alert(DOM.getElementData('value', document.getElementById('target'))); return false;">Test</a>
+		<p>Using this block of HTML:</p>
+		<pre>
+  ...
+&lt;/div&gt;
+&lt;span class="elementData"&gt;
+  value=This is the value of the comment Data
+&lt;/span&gt;
+&lt;div id="otherDiv"&gt;
+  ...
+		</pre>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<ajax>
+	<statement userid="31" id="403883" time="1151429521">
+		<![CDATA[
+			I'm saying something.
+		]]>
+	</statement>
+	<statement userid="42" id="403884" time="1151429932">
+		<![CDATA[
+			I disagree.
+		]]>
+	</statement>
+	<userArrival name="Galtieri" privilege="user" id="432" time="1151429343" />
+	<userDeparture id="31" time="1151429431" />
+</ajax>

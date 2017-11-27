@@ -1,0 +1,70 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			Number Input Widget
+		</title>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/behaviour.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/HID.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/kNumberBox.js"></script>
+	</head>
+	<script type="text/javascript" language="javascript1.5">
+		<!--
+			Behaviour.addLoadEvent(function() {
+				new kNumberBox({
+					node: document.getElementsByTagName('input')[0],
+					options: [
+						'1:00 pm',
+						'1:30 pm',
+						'2:00 pm',
+						'2:30 pm',
+						'3:00 pm',
+						'3:30 pm',
+						'4:00 pm',
+						'4:30 pm',
+						'5:00 pm',
+						'5:30 pm',
+						'6:00 pm',
+						'6:30 pm',
+						'7:00 pm',
+						'7:30 pm',
+						'8:00 pm',
+						'8:30 pm',
+						'9:00 pm',
+						'9:30 pm',
+						'10:00 pm',
+						'10:30 pm',
+						'11:00 pm',
+						'11:30 pm',
+						'12:00 pm',
+						'12:30 pm'
+					],
+					imgUp: './i/up.gif',
+					imgDown: './i/down.gif',
+					validate: /^\s*1?[0-9]{1}:[0-9]{2}\s*([ap]{1}m{1})\s*$/i
+				});
+				new kNumberBox({
+					node: document.getElementsByTagName('input')[1],
+					min: 6,
+					max: 110,
+					imgUp: './i/up.gif',
+					imgDown: './i/down.gif'
+				});
+			});
+		//-->
+	</script>
+	<body>
+		<h1>kNumberBox Demo</h1>
+		<p>Provides incremental/enumerative number inputs. Sometimes this is a good replacement
+			for a <code>&lt;select&gt;</code>.</p>
+		<form>
+			<p>What time is it? <input value="1:30" type="text" class="time" /></p>
+			<p>How old are you? <input value="1" type="text" /></p>
+		</form>
+	</body>
+</html>

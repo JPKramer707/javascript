@@ -1,0 +1,60 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kScroller Demo
+		</title>
+		<style>
+			@import url('css/kScroller.css');
+		</style>
+
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/document.getElementsBySelector.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/DOM.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kScroller.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				window.onload = function() {
+					scroller = new kScroller({
+						n_container: document.getElementById('box'),
+						n_roll: document.getElementById('credits'),
+						loop: true,
+						seamless: true,
+						seamlessSelector: 'dl',
+						pauseOnMouseover: true,
+						delay: 1,
+						increment: 1
+					});
+				};
+			//-->
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="credits">
+				<dl>
+					<dd>1</dd>
+				</dl>
+				<dl>
+					<dd>2</dd>
+				</dl>
+				<dl>
+					<dd>3</dd>
+				</dl>
+			</div>
+		</div>
+		<p>
+			This scroller is set to pause when a &lt;dd&gt; is hovered with the pointer.
+			It is also set for seamless continuity, meaning that the start of the list
+			is "connected" to the end of the list in an unending roll.
+		</p>
+		<p>
+			<a href="javascript:void(0);" onclick="scroller.pause(true); return false;">Pause</a>
+			<a href="javascript:void(0);" onclick="scroller.pause(false); return false;">Roll</a>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+.kDatePicker {
+	z-index: 200;
+	width: 10px;
+}
+.kDatePicker table {
+	background-color: #fff;
+}
+.kDatePicker table caption div.next,
+.kDatePicker table caption div.prev {
+	float: left;
+	cursor: pointer;
+	width: 20px;
+}
+.kDatePicker table caption div.next {
+	float: right;
+}
+.kDatePicker table tbody td,
+.kDatePicker table tfoot div {
+	cursor: pointer;
+}

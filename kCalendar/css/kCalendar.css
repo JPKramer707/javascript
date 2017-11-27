@@ -1,0 +1,84 @@
+.kCalendar table {
+	width: 185px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	font-family: arial, helvetica, sans-serif;
+}
+.kCalendar table caption {
+	background-color: #936241;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 30px;
+	border: 1px solid #D5CEA8;
+	border-bottom: 0;
+}
+.kCalendar table th, table td {
+	text-align: center;
+	border: 1px solid #D5CEA8;
+	padding: 0;
+	margin: 0;
+	line-height: 24px;
+}
+.kCalendar table th {
+	background-color: #E5E5DA;
+	line-height: 20px;
+}
+.kCalendar table td {
+	pointer: default;
+}
+.kCalendar table td.outOfBounds {
+	color: #cfcfcf;
+}
+.kCalendar table td.thisDay {
+	background-color: #B6E3F6;
+}
+.kCalendar table td.today {
+}
+.kCalendar table td:hover {
+	background-color: #efefef;
+}
+.kCalendar table tr.thisWeek {
+	background-color: #EBF7FC;
+}
+.kCalendar {
+	width: 216px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	font-family: arial, helvetica, sans-serif;
+}
+.kCalendar caption {
+	background-color: #936241;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 30px;
+	border: 1px solid #D5CEA8;
+	border-bottom: 0;
+}
+.kCalendar th, .kCalendar td {
+	text-align: center;
+	border: 1px solid #D5CEA8;
+	padding: 0;
+	margin: 0;
+	line-height: 24px;
+}
+.kCalendar th {
+	background-color: #E5E5DA;
+	line-height: 20px;
+}
+.kCalendar td.outOfBounds {
+	color: #cfcfcf;
+}
+.kCalendar td.thisDay {
+	background-color: #B6E3F6;
+}
+.kCalendar td.today {
+	background-color: yellow;
+}
+.kCalendar td:hover {
+	background-color: #efefef;
+}
+.kCalendar tr.thisWeek {
+	background-color: #EBF7FC;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kAjaxForm Demo
+		</title>
+		<style>
+			@import url('css/kAjaxForm.css');
+		</style>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/behaviour.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/kAjaxForm.js"></script>
+		<script type="text/javascript" language="javascript1.2">
+			<!--
+				Behaviour.register({
+					'form.kAjaxForm': function(el) {
+						new kAjaxForm({
+							node: el,
+							c_onComplete: function(req) {
+								alert('The server responded with:\n\n'+req.responseText);
+							}
+						});
+					}
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kAjaxForm Demo</h1>
+		<p>
+			When a an "ajax form" is submitted, the form submission does not run natively through the browser as expected.
+			Rather, that form is submitted via ajax. This can be a simple way to get quick changes
+			to the server. Server feedback is run through an optional callback function.
+		</p>
+		<form action="data.txt" class="kAjaxForm">
+			<input type="text" name="testData" value="This is a test" />
+			<input type="submit" value="Test It" />
+		</form>
+	</body>
+</html>

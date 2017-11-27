@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<playlist>
+	<track>
+		<name>With our Hands</name>
+		<url>mp3/track1.mp3</url>
+	</track>
+	<track>
+		<name>Open Wide</name>
+		<url>mp3/track2.mp3</url>
+	</track>
+	<track>
+		<name>Yes</name>
+		<url>mp3/track3.mp3</url>
+	</track>
+</playlist>

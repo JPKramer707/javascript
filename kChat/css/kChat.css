@@ -1,0 +1,36 @@
+div {
+	border: 1px solid blue;
+}
+ul {
+	float: right;
+	list-style-type: none;
+	border: 1px solid blue;
+	border-right: 0;
+	border-top: 0;
+	margin: 0;
+	padding: 0 0 0 10px;
+	width: 200px;
+}
+ul .priv_admin {
+	font-style: italic;
+}
+dd.priv_Bot {
+	color: red;
+}
+dl {
+	float: left;
+	height: 300px;
+	width: 500px;
+	overflow: auto;
+}
+dl dt {
+	float: left;
+	padding-right: 5px;
+	font-weight: bold;
+}
+form {
+	clear: both;
+}
+form input.text {
+	width: 80%;
+}

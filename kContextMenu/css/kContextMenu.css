@@ -1,0 +1,28 @@
+.kContextMenu {
+	position: absolute;
+	border: 2px outset;
+	background: #ccc;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 10px;
+}
+.kContextMenu li {
+	cursor: pointer;
+}
+.kContextMenu li.div {
+	margin: 1px 0;
+	font-size: 0;
+	line-height: 0;
+	border-bottom: 1px solid #777;
+}
+.kContextMenu li.hover,
+.kContextMenu li:hover {
+	background: #02007F;
+	color: #fff;
+}
+.kContextMenu li p {
+	margin: 0;
+	padding: 0 10px;
+}

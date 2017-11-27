@@ -1,0 +1,95 @@
+/* kDialog Style
+------------------------------------------*/
+.kDialog {
+	width: 300px;
+	font-family: arial, helvetica, sans-serif;
+}
+.kDialog.dialog,
+.kDialog.EditItemDialog,
+.kDialog.EditExpireDialog,
+.kDialog.saveDocumentDialog {
+	width: 378px;
+}
+.kDialog.EditTagDialog {
+	width: 329px;
+}
+
+.kDialog {
+	position: absolute;
+	border: 2px outset #efefef;
+}
+.kDialog .kDialog_right div.kDialog_content {
+	/* Needs a background image (gradient) */
+	background: #efefef;
+	padding: 2px;
+	overflow: hidden;
+}
+.kDialog .kDialog_right div.kDialog_content h2 {
+	font-size: 15px;
+	font-weight: bold;
+	background: #FF9900;
+	color: white;
+	padding: 2px 5px;
+	margin: 0;
+	text-align: left;
+}
+div.kDialog.salesmap div.kDialog_content2 {
+	margin: 0;
+	padding: 0;
+}
+div.kDialog div.kDialog_content2 h2 {
+	/* We need to override the default H2 style */
+	padding: 0;
+	margin: 0;
+	background: none;
+	border: 0;
+	line-height: 1em;
+}
+
+.kDialog div.kDialog_titlebar {
+	border: 0;
+	padding: 0;
+	margin: 0 0 12px 0;
+	border-bottom: 1px solid #D2D2D2;
+	height: 17px;
+}
+.kDialog .kDialog_titlebar h2 {
+	/*float: left;*/
+	background:none;
+	border:none;
+	line-height:17px;
+	margin:0;
+	padding:0;
+}
+.kDialog .kDialog_titlebar span {
+}
+.kDialog a.kDialog_closeButton {
+	/* The close button and text */
+	color: white;
+	height: 11px;
+	line-height: 20px;
+	padding: 0 5px 0 0;
+	float: right;
+	text-align: right;
+}
+.kDialog form input.button {
+	float: right;
+	margin-right: 9px;
+}
+.kDialog form a {
+	float: left;
+}
+
+/* Focus Shield
+-------------------------------- */
+.kDialog_lightBox {
+	background: #fff;
+	height: 150%;
+	width: 150%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	filter: alpha(opacity=75);
+	-moz-opacity: .75;
+	opacity:.75;
+}

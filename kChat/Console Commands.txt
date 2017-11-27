@@ -1,0 +1,42 @@
+kChat Console Commands
+
+The following console commands were provided for debugging and convenience purposes. Enter any of them into the chat input text field at any time.
+
+	/viewxml
+		Displays the contents of the next incoming XML file
+
+	/clear
+		Clear the message pane
+
+	/changestate <(pre|ready|chat|post)>
+		Change the state of the chat
+
+	/freeze
+		Stop the AJAX timer
+
+	/unfreeze
+		Resume the AJAX timer
+
+	/debug
+		Toggle debugging messages
+
+	/system
+		Toggle system messages
+
+	/interval <n>
+		Set the AJAX interval to n milliseconds
+
+	/scrollto <(top|bottom)>
+		Select a direction for new messages to flow
+
+	/refresh
+		Forces an immediate AJAX refresh
+
+	/annoy <n>
+		Sends repeated "statements" every <n> ms
+
+	/adduser <id> <name> <privilege>
+		Adds a fake user to your screen.
+
+	/deluser <name>
+		Removes a user from your screen, by name.

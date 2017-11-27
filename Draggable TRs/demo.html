@@ -1,0 +1,75 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <title>
+      Draggable <tr> elements
+    </title>
+    <style>
+    	@import url('./css/default.css');
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="../THIRD-PARTY%20LIBRARIES/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="../THIRD-PARTY%20LIBRARIES/scriptaculous.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="../THIRD-PARTY%20LIBRARIES/dragdrop.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="./js/dragdrop-tr.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+		  <!--
+		    window.onload = function() {
+		    	var trs = document.getElementsByTagName('tr');
+		    	for (var x=0; x<trs.length; x++) {
+			    	new Draggable(trs[x], {
+			    		ghosting: true,
+			    		revert: true
+			    	});
+			    }
+		    };
+		  //-->
+		</script>
+  </head>
+  <body>
+		<h1>Draggable &lt;tr&gt; elements</h1>
+		<p>A browser limitation prevents Scriptaculous draggables from being
+		applied to table rows. This can be a problem when tables are being used in a semantically-correct manner,
+		yet rows need to be dragged. The following patch to Scriptaculous attempts to circumvent
+		this limitation by slyly cloning the containing table and creating a twin sibling of it,
+		containing the row to be dragged.</p>
+		<p>Right now, it only works with ghosting turned on.</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Gender</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Kramer</td>
+					<td>26</td>
+					<td>M</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>John</td>
+					<td>35</td>
+					<td>M</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Lisette</td>
+					<td>15</td>
+					<td>F</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Sarxdin</td>
+					<td colspan="2">15/f/ca</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+  </body>
+</html>

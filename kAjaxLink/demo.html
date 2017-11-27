@@ -1,0 +1,32 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kAjaxLink Demo
+		</title>
+		<style>
+			@import url('css/kAjaxLink.css');
+		</style>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/behaviour.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="js/kAjaxLink.js"></script>
+		<script type="text/javascript" language="javascript1.2">
+			<!--
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kAjaxLink Demo</h1>
+		<p>
+			When a an "ajax link" is clicked, the href is not loaded in the browser as expected.
+			Rather, that link is retrieved via ajax. This can be a simple way to get commands
+			to the server. Server feedback is ignored, though, so it's probably of limited use
+			as-is.
+		</p>
+		<p><a class="kAjaxLink" href="data.txt?q=solutionset&start=0&ie=utf-8&oe=utf-8&client=firefox-a&rls=org.mozilla:en-US:official">AJAX Link to Google</a></p>
+	</body>
+</html>

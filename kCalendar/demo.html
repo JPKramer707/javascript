@@ -1,0 +1,94 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kCalendar Demo
+		</title>
+		<style>
+			@import url('css/kCalendar.css');
+			@import url('css/kDatePicker.css');
+
+			#kDatePicker {
+				float: left;
+				width: 50%;
+			}
+			#kCalSet {
+				float: right;
+				width: 50%;
+			}
+			#kCalSet img {
+				cursor: pointer;
+			}
+			#kCalSet table.kCalendar {
+				margin-bottom: 15px;
+			}
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/behaviour.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/DOM.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/Date.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kCalendar.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kDatePicker.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kCalSet.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				Behaviour.addLoadEvent(function() {
+					new kCalSet({
+						container: document.getElementById('kCalSet'),
+						btnPrev: document.getElementById('kCalSet').getElementsByTagName('img')[0],
+						btnNext: document.getElementById('kCalSet').getElementsByTagName('img')[1],
+						calendars: [
+							document.getElementsByClassName('kCalendar', document.getElementById('kCalSet'))[0],
+							document.getElementsByClassName('kCalendar', document.getElementById('kCalSet'))[1],
+							document.getElementsByClassName('kCalendar', document.getElementById('kCalSet'))[2]
+						],
+						onClickDate: function() {},
+						onHoverDate: function() {},
+						specialDates: [],
+						tweakSpecialDate: function() {},
+						date: new Date()
+					});
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kCalendar/kDatePicker/kCalSet Demo</h1>
+		<p>
+			This is actually a composite demo.
+		</p>
+		<dl>
+			<dt>kCalendar</dt>
+			<dd>The core calendar-generator used by both kDatePicker and kCalSet.
+			It can also be used by itself.</dd>
+			<dt>kDatePicker</dt>
+			<dd>Reacts to tags written with a class of "date," example: <code>&lt;input type="text" class="date" value="July 13, 1980" /&gt;</code>
+			Attaches to them a popup date picker.</dd>
+			<dt>kCalSet</dt>
+			<dd>Creates a set of calendars which permit such things as date selection and
+			scrolling through the calendar list to reach further months/years.</dd>
+		</dl>
+
+		<!--CalendarGoesHere-->
+		<div id="kDatePicker">
+			<h2>kDatePicker</h2>
+			<form>
+				<input type="text" class="date" value="July 13, 1980" />
+			</form>
+			<p>Click on the input field above to see the date picker.</p>
+		</div>
+
+		<div id="kCalSet">
+			<h2>kCalSet</h2>
+			<img src="i/cal_up.gif" />
+			<img src="i/cal_down.gif" />
+			<table class="kCalendar"><caption>March 2008</caption><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr class=""><td class="outOfBounds">29</td><td class="outOfBounds">30</td><td class="">1</td><td class="">2</td><td class="">3</td><td class="">4</td><td class="">5</td></tr><tr class=""><td class="">6</td><td class="">7</td><td class="">8</td><td class="">9</td><td class="">10</td><td class="">11</td><td class="">12</td></tr><tr class="thisWeek"><td class="">13</td><td class="">14</td><td class="">15</td><td class="">16</td><td class="thisDay">17</td><td class="">18</td><td class="">19</td></tr><tr class=""><td class="">20</td><td class="">21</td><td class="">22</td><td class="">23</td><td class="">24</td><td class="">25</td><td class="">26</td></tr><tr class=""><td class="">27</td><td class="">28</td><td class="">29</td><td class="">30</td><td class="">31</td><td class="outOfBounds">1</td><td class="outOfBounds">2</td></tr></tbody></table>
+			<table class="kCalendar"><caption>April 2008</caption><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr class=""><td class="outOfBounds">29</td><td class="outOfBounds">30</td><td class="">1</td><td class="">2</td><td class="">3</td><td class="">4</td><td class="">5</td></tr><tr class=""><td class="">6</td><td class="">7</td><td class="">8</td><td class="">9</td><td class="">10</td><td class="">11</td><td class="">12</td></tr><tr class="thisWeek"><td class="">13</td><td class="">14</td><td class="">15</td><td class="">16</td><td class="thisDay">17</td><td class="">18</td><td class="">19</td></tr><tr class=""><td class="">20</td><td class="">21</td><td class="">22</td><td class="">23</td><td class="">24</td><td class="">25</td><td class="">26</td></tr><tr class=""><td class="">27</td><td class="">28</td><td class="">29</td><td class="">30</td><td class="">31</td><td class="outOfBounds">1</td><td class="outOfBounds">2</td></tr></tbody></table>
+			<table class="kCalendar"><caption>April 2008</caption><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr class=""><td class="outOfBounds">29</td><td class="outOfBounds">30</td><td class="">1</td><td class="">2</td><td class="">3</td><td class="">4</td><td class="">5</td></tr><tr class=""><td class="">6</td><td class="">7</td><td class="">8</td><td class="">9</td><td class="">10</td><td class="">11</td><td class="">12</td></tr><tr class="thisWeek"><td class="">13</td><td class="">14</td><td class="">15</td><td class="">16</td><td class="thisDay">17</td><td class="">18</td><td class="">19</td></tr><tr class=""><td class="">20</td><td class="">21</td><td class="">22</td><td class="">23</td><td class="">24</td><td class="">25</td><td class="">26</td></tr><tr class=""><td class="">27</td><td class="">28</td><td class="">29</td><td class="">30</td><td class="">31</td><td class="outOfBounds">1</td><td class="outOfBounds">2</td></tr></tbody></table>
+		</div>
+	</body>
+</html>

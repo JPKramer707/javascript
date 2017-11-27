@@ -1,0 +1,133 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			Slideshow Demo
+		</title>
+		<script type="text/javascript" language="javascript1.2" src="./js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="./js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="./js/scriptaculous.js"></script>
+		<script type="text/javascript" language="javascript1.2" src="./js/Slideshow.js"></script>
+		<script type="text/javascript" language="javascript1.2">
+			window.onload = function() {
+				new Slideshow({
+					container: document.getElementById('container'),           // The element in which the slides will be displayed
+					controls: document.getElementById('container_controls'),
+					controlPlayText: 'Play',
+					controlPauseText: 'Pause',
+					effect: 'crossfade',                                       // Transition effect. Currently supported: 'crossfade' or 'none'. Crossfade only works with recent ver. of Scriptaculous.
+					ajaxUrl: './slideshow.xml',                                // URL at which to grab the XML slideshow script
+					
+					autoStart: false,
+					displaySeconds: 2,                                         // Delay between slides
+					clickToAdvance: true,                                      // Clicking a slide advances to the next - precludes us from using hrefs, of course.
+					clickToAdvanceStopsTimer: true,                           // Enable this if you want the click-to-advance feature to stop the automatic timered slide advancement
+					flvPlayerURL: './flvplayer.swf',                           // FLV Player's URL
+					shuffle: false,                                             // Random-sequence slide change
+					looping: true                                              // Start from beginning when the end has been reached?
+					// Are you wondering why these options aren't having any effect?
+					// It's because any conflicting options in the XML file get priority.
+					// Also, for effect: 'crossfade' to do its thing you'll need a
+					// reasonably recent version of Scriptaculous installed.
+				});
+			};
+		</script>
+		<style>
+			div.slideshow {
+				position:relative;
+				border:1px dotted black;
+				height:388px;
+				width:518px;
+			}
+			#container {
+			}
+			#container_controls {
+				filter:alpha(opacity=75);
+				-moz-opacity:.75;
+				opacity:.75;
+				position:absolute;
+				bottom:2px;
+				left:2px;
+				right:2px;
+				height:16px;
+				background-image:url(bg_controls.gif);
+			}
+			#container_controls ul {
+				font-size:9px;
+				font-family:Verdana, Arial, Helvetica, sans-serif;
+				font-weight:bold;
+				color:#000000;
+				list-style-type:none;
+				list-style-position:outside;
+				background-image:url(bg_controls_play.gif);
+				background-repeat:no-repeat;
+				height:16px;
+				margin:0;
+				padding:0;
+			}
+			#container_controls ul li {
+				margin:0;
+				padding:0;
+				line-height:16px;
+				padding:0 8px;
+			}
+			#container_controls ul li.skip {
+				padding:0 3px;
+			}
+			#container_controls ul li a {
+				text-decoration:none;
+				color:#000000;
+			}
+			#container_controls ul li.pause,
+			#container_controls ul li.play {
+				float:left;
+				display:inline;
+			}
+			#container_controls ul li.play a {
+				overflow:hidden;
+				font-size:1px;
+				display:block;
+				background-image:url(bg_controls_play_button.gif);
+				background-repeat:no-repeat;
+				height:0px;
+				width:6px;
+				margin-top:5px;
+				padding-top:6px;
+			}
+			#container_controls ul li.pause a {
+				font-size:1px;
+				overflow:hidden;
+				display:block;
+				background-image:url(bg_controls_pause_button.gif);
+				background-repeat:no-repeat;
+				height:0px;
+				width:6px;
+				margin-top:5px;
+				padding-top:6px;
+			}
+			#container_controls ul li.skip {
+				float:right;
+				display:inline;
+				background-image:url(bg_controls_skip.gif);
+				background-position:top right;
+				background-repeat:no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Slideshow Demo</h1>
+		<div class="slideshow">
+			<div id="container">
+			</div>
+			<div id="container_controls">
+				<ul>
+					<li class="play"><a href="javascript:void(0);">Play</a></li>
+					<li class="skip"><a href="javascript:void(0);">Skip &gt;</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

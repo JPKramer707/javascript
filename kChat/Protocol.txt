@@ -1,0 +1,78 @@
+AJAX Chat Protocol
+By Kramer
+060627
+
+An explanation of the AJAX protocol used by the Chat application.
+
+
+GET VARIABLES SENT TO THE SERVER:
+
+	Sample: ?statement=Im+saying+something&lastStatementID=403883&lastMovementTime=1151429521&chatID=406&newState=post
+
+	Explanation:
+		lastStatementID: The ID of the last statement received by the client. In its XML response, the server should return any messages which were contributed after that statement ID.
+		statement: The string which the user wishes to contribute to the chat.
+		lastMovementTime: The last timestamp received from the server for a user arrival/departure event. In XML response, the server should send all arrivals/departures that took place since this timestamp.
+		chatID: ID of the chat the user is submitting their statement to.
+		newState: Instructs the server to change the state of the chat. (pre|ready|chat|post) Only sent when a change of state is needed. See Note #3
+
+
+XML DATA RETURNED FROM THE SERVER:
+
+	Sample:
+		<ajax>
+			<state code="ready">
+				<![CDATA[
+					<h1>Awaiting Leader</h1>
+					<p>The chat leader has not started this chat yet.</p>
+				]]>
+			</state>
+			<statement userid="134" id="403883" time="1151429521">
+				<![CDATA[
+					I'm saying something.
+				]]>
+			</statement>
+			<statement userid="422" id="403884" time="1151429932">
+				<![CDATA[
+					I disagree.
+				]]>
+			</statement>
+			<userArrival name="Galtieri" privilege="user" id="422" time="1151429343" />
+			<userDeparture id="134" time="1151429431" />
+		</ajax>
+
+	Explanation:
+		Tag STATE
+			Signals the current state of the chat. The value inside this tag is HTML to display in lieu of the chat window, if desired.
+			ATTRIBUTES
+				code: The state code. Valid values: pre|ready|chat|post. See note #3
+
+		Tag STATEMENT
+			Encapsulates a user's contribution to the chat, plus some metadata.
+			ATTRIBUTES:
+				userid: The id of the user who has spoken
+				id: The id of the statement itself
+				time: UNIX timestamp representing the time at which the user contributed this.
+
+		Tag USERARRIVAL
+			Communicates a "user has entered the chat" event to the client.
+			ATTRIBUTES:
+				name: Username of the user.
+				privilege: Privilege level of the user. Valid values: admin|user
+				id: User's id.
+				time: Time of the arrival event, UNIX timestamp
+
+		Tag USERDEPARTURE
+			Communicates a "user has exited the chat" event to the client.
+			ATTRIBUTES:
+				id: User's id.
+				time: Time of the exit event, UNIX timestamp
+
+NOTES:
+	1) At times, the client will send a GET request with no statement included. This is a simple request for updated data.
+	2) The client needs the server to "echo" its statements. Each statement send by a client should be inputted into the database, and then included in the list of statements returned to that client in the XML. In other words, a client does not automatically inject its own statements into the chat.
+	3) <state> is always sent, in every AJAX response. Values mean:
+		"pre": Scheduled time not reached yet.
+		"ready": Time reached, leader has not activated the chat yet.
+		"chat": Chat mode
+		"post": Chat over.

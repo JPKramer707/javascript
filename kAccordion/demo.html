@@ -1,0 +1,40 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kAccordion Demo
+		</title>
+		<style>
+			@import url('css/kAccordion.css');
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/DOM.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/document.getElementsBySelector.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/EventSelectors.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kAccordion.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				EventSelectors.addLoadEvent(function() {
+					new kAccordion({
+						elRoot: document.getElementsByTagName('dl')[0],
+						selHeading: 'dt'
+					});
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kAccordion Demo</h1>
+		<dl>
+			<dt>One</dt>
+			<dt>Two</dt>
+			<dd>Contents of one</dd>
+			<dd>Contents of Two</dd>
+			<dd>Contents of Three</dd>
+		</dl>
+	</body>
+</html>

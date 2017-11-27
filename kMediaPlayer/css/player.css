@@ -1,0 +1,82 @@
+#controls li {
+	float:left;
+	margin-right:5px;
+	display:block;
+	width:16px;
+	height:16px;
+	text-indent:-9999px;
+	background-repeat:no-repeat;
+}
+
+#controls li.play	{
+	background-image: url(../i/play.gif);
+}
+
+#controls li.pause {
+	background-image: url(../i/pause.gif);
+}
+
+#controls li.stop {
+	background-image: url(../i/stop.gif);
+}
+
+#controls li.previous {
+	background-image: url(../i/previous.gif);
+}
+
+#controls li.next {
+	background-image: url(../i/next.gif);
+}
+
+#controls li.mute {
+	background-image: url(../i/volume.gif);
+}
+
+#controls .volume {
+	margin-left: 220px;
+}
+#controls .track {
+	width: 100px;
+	height: 5px;
+	border: inset 1px;
+}
+#controls .handle {
+	top: -9px;
+	width: 5px;
+	height: 15px;
+	border: outset 2px;
+	background-color: #ccc;
+}
+
+div.mp3 {
+	background: #999999;
+	height: 20px;
+	}
+.mp3 ul {
+	list-style-type:none;
+	}
+.mp3 ul li {
+	margin-left: 5px;
+	float: left;
+	}
+.mp3 ul li a{
+	margin: 00 3px;
+	line-height: 20px;
+	font-size: 20px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#666666;
+	border: 0;
+}
+.mp3 ul li a img {
+	border: 0;
+}
+.sliderInput {
+	height:20;
+	width:40;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+}
+#controls {
+	clear: both;
+}

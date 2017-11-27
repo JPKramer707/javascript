@@ -1,0 +1,12 @@
+// EventSelectors
+// Copyright (c) 2005-2006 Justin Palmer (http://encytemedia.com)
+// Examples and documentation (http://encytemedia.com/event-selectors)
+//
+// EventSelectors allow you access to Javascript events using a CSS style syntax.
+// It goes one step beyond Javascript events to also give you :loaded, which allows
+// you to wait until an item is loaded in the document before you begin to interact
+// with it.
+//
+// Inspired by the work of Ben Nolan's Behaviour (http://bennolan.com/behaviour)
+//
+// Pe

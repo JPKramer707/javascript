@@ -1,0 +1,44 @@
+/* Player
+-------------------------------- */
+#player {
+	margin: 10px auto;
+	padding-bottom: 10px;
+	width: 800px;
+	background: url('../i/background.gif');
+	background-position: 0 1px;
+	background-repeat: no-repeat;
+}
+#player .player {
+	margin-left: 257px;
+}
+#player .controls {
+	float: left;
+	margin: 18px 0 0 14px;
+	display: inline; /* MSIE bugfix (float left, margin left) */
+}
+#player .controls img {
+	margin-right: 3px;
+}
+#player .trash {
+	float: right;
+	margin: 19px 13px 0 0;
+	display: inline; /* MSIE bugfix (float left, margin left) */
+}
+
+
+/* Clearfix and other trickery/shenanigans
+-------------------------------- */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */

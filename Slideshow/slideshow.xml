@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<slideshow>
+	<prefs type="global">
+		<pref name="displaySeconds" value="2" />           <!-- Delay between slides -->
+		<pref name="clickToAdvance" value="1" />           <!-- Clicking a slide advances to the next - precludes us from using hrefs, of course. -->
+		<!-- Note that a slide's href property will have no effect if the clickToAdvance option is set on! -->
+		<pref name="clickToAdvanceStopsTimer" value="0" /> <!-- Enable this if you want the click-to-advance feature to stop the automatic timered slide advancement -->
+		<pref name="shuffle" value="0" />                  <!-- Random-sequence slide change -->
+		<pref name="looping" value="1" />                  <!-- Start from beginning when the end has been reached? -->
+		<pref name="effect" value="none" />                <!-- What effect to use when transitioning slides (currently "crossfade" or "none") -->
+		<pref name="height" value="" />                    <!-- Height of all images/videos (can be overridden on a slide-by-slide basis. This value is required for videos. WARNING: Can screw up the aspect ratio, set just one value to maintain aspect ratio, but both must be set for videos -->
+		<pref name="width" value="" />                     <!-- Width (see above) -->
+	</prefs>
+	<slide type="image" url="./i/thumb_preview_217.jpg"></slide>
+	<slide type="video" url="v/sample1.flv">
+		<pref name="height" value="388" />
+		<pref name="width" value="518" />
+	</slide>
+	<slide type="image" url="./i/thumb_preview_218.jpg"></slide>
+	<slide type="video" url="v/sample1.flv">
+		<pref name="height" value="388" />
+		<pref name="width" value="518" />
+	</slide>
+	<slide type="image" url="./i/thumb_preview_219.jpg"></slide>
+	<!--
+	<slide type="video" url="v/sample2.flv">
+		<pref name="height" value="280" />
+		<pref name="width" value="368" />
+	</slide>
+	-->
+</slideshow>

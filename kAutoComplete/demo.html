@@ -1,0 +1,35 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kAutoComplete Demo
+		</title>
+		<style>
+			@import url('css/kAutoComplete.css');
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/behaviour.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kAutoComplete.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				if (document.all && window.location.href.indexOf('file://') == 0) alert('Remember, when viewing files from your hard drive, AJAX demos dont work in MSIE.\n\nUpload the demo to a server for results.');
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kAutoComplete Demo</h1>
+		<p>An autocomplete widget. The work of supplying, sorting, and filtering autocomplete
+			suggestions is all on the server side. This script simply supplies the given
+			suggestions to the user and handles UI concerns. As you can see, the demo XML file
+			used in this demonstration does not apply to what you type, it's just a static
+			collection of words.
+		</p>`
+		<form>
+			<input type="text" class="kAutoComplete" src="./ajax.xml" />
+		</form>
+	</body>
+</html>

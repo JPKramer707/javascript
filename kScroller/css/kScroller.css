@@ -1,0 +1,35 @@
+html {
+	background: black;
+	color: white;
+	font-size: 35px;
+	overflow: hidden;
+}
+div#credits {
+	position: absolute;
+	text-align: center;
+	align: center;
+	width: 100%;
+}
+dl {
+	width: 100%;
+}
+dt, dd {
+	padding: 0;
+	margin: 0;
+}
+dd {
+	font-family: arial, helvetica, sans-serif;
+	margin-bottom: 10px;
+}
+img {
+	margin-bottom: 150px;
+}
+#box {
+	float: left;
+	position: relative;
+	overflow: hidden;
+	height: 300px;
+	width: 300px;
+	margin: 100px;
+	border: 2px inset red;
+}

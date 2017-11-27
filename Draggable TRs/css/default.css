@@ -1,0 +1,36 @@
+table {
+	border-collapse: collapse;
+	font-family: arial, helvetica, sans-serif;
+	width: 100%;
+	font-size: 12px;
+}
+table thead tr {
+	border: 1px solid;
+	border-color: threedlightshadow threeddarkshadow threeddarkshadow threedlightshadow;
+}
+table thead tr th {
+	border: 1px solid;
+	border-color: threedhighlight threedshadow threedshadow threedhighlight;
+	background: threedface;
+	padding: 0 5px;
+	color: ButtonText;
+}
+table thead tr th.sort {
+	background: #77C7EF;
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+table thead tr th.sort.ascending {
+	background-image: url('./i/sortup.gif');
+}
+table thead tr th.sort.descending {
+	background-image: url('./i/sortdown.gif');
+}
+table thead tr th div.border {
+	cursor: w-resize;
+}
+table tbody tr td {
+	border: 1px solid #ccc;
+	border-top: 0;
+	color: AppWorkspace;
+}

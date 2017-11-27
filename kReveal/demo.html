@@ -1,0 +1,54 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kWidget Demo
+		</title>
+		<style>
+			@import url('css/kWidget.css');
+
+			.kReveal, .kRevealSmooth {
+				border: outset 2px;
+				display: inline;
+				margin: 5px;
+				padding: 5px;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="../THIRD-PARTY%20LIBRARIES/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="../prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="../THIRD-PARTY%20LIBRARIES/EventSelectors.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="../THIRD-PARTY%20LIBRARIES/scriptaculous.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="../EventSelectors.onDOMLoad.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="../DOM.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kReveal.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				// This code creates a different instance of kReveal with different options:
+				EventSelectors.onDOMLoad(function() {
+					new kReveal({
+						revealMethod: Effect.BlindDown,
+						className: 'kRevealSmooth'
+					});
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kReveal Demo</h1>
+		<p>Reveals hidden page elements on click (or other action)</p>
+		<p>You have any number of hidden elements (revealees) and any number of other elements which, when used, reveals the revealees.</p>
+		<p>Simply add a unique className to revealees, such as "revealMe." Then, add a classname to the revealers such as "kReveal show_revealMe" which essentially
+		instructs kReveal to show all elements with a class of "revealMe".</p>
+		<p>You can also customize what type of reveal will be done - default is a simple display:block, but any method can be called via callback function.</p>
+		<h2 class="kReveal show_test">Try It! Click here.</h2>
+		<p class="test" style="display: none;">This text was revealed by your click. There's no way to hide it, but, there's nothing stopping you from writing your own reveal
+			method, which could detect whether the element is already shown, and hiding rather than showing it on click. You would then have a toggle. I dunno. Go nuts.</p>
+		<h2 class="kRevealSmooth show_testBlindDown">And with Scriptaculous' Effect.BlindDown!</h2>
+		<p class="testBlindDown" style="display: none;">This text was revealed by your click. There's no way to hide it, but, there's nothing stopping you from writing your own reveal
+			method, which could detect whether the element is already shown, and hiding rather than showing it on click. You would then have a toggle. I dunno. Go nuts.</p>
+	</body>
+</html>

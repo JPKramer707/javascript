@@ -1,0 +1,62 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kButton Demo
+		</title>
+		<style>
+			@import url('css/kButton.css');
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/EventSelectors.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kButton.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				EventSelectors.register({
+					'img': function(el) {
+						new kButton({
+							element: el,
+							toggle: false
+						});
+					}
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kButton Demo</h1>
+
+		<p>
+			Turns any image (or, with easy modification, any element) into a button. The button can
+			have up and down images, and can function as a toggle or momentary-contact. Events can be
+			attached to fire on click, on toggle down, or on toggle up.
+		</p>
+
+		<p>
+			The biggest job that this object does is to manage your button's visual display and fire
+			events for you.
+		</p>
+
+		<p>
+			Note that even when a button is functioning in toggle mode, it will still fire the onClick
+			event (if any is given) alongside the onToggleDown or onToggleUp events
+		</p>
+
+		<div id="player" class="clearfix">
+			<div class="controls">
+				<img src="./i/back.gif" alt="Back" title="Back" />
+				<img src="./i/stop.gif" alt="stop" title="stop" />
+				<img src="./i/play.gif" alt="play" title="play" />
+				<img src="./i/forward.gif" alt="forward" title="forward" />
+			</div>
+
+			<div class="trash">
+				<img src="./i/trash.gif" alt="Trash" title="Discard this message" />
+			</div>
+		</div>
+	</body>
+</html>

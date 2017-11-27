@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>mp3player_js</title>
+		<style type="text/css" media="all">
+			@import url("css/player.css");
+		</style>
+		<script type="text/javascript" src="js/JavaScriptFlashGateway.js"></script>
+		<script type="text/javascript" src="js/cookies.js"></script>
+		<script type="text/javascript" src="js/prototype.js"></script>
+		<script type="text/javascript" src="js/kMediaPlayer.js"></script>
+		<script type="text/javascript" src="js/detectFlash.js"></script>
+		<script type="text/javascript" src="js/behaviour.js"></script>
+		<script type="text/javascript" src="js/Behaviour.addonunload.js"></script>
+		<script>
+			var mp;
+			var o_fProxy; // temporary
+			Behaviour.addLoadEvent(
+				function() {
+					mp = new kMediaPlayer({
+						n_flash: document.getElementById('flash'),
+						n_controls: document.getElementById('controls'),
+						n_trackname: document.getElementById('trackname'),
+						n_status: document.getElementById('status'),
+						n_volume: document.getElementById('volume'),
+						n_time: document.getElementById('timer'),
+						n_tracklength: document.getElementById('tracklen'),
+						progressColor: '0x0033ff',
+						playerUrlSWF: 'swf/MediaPlayer.swf',
+						fProxyUrlSWF: 'swf/JavaScriptFlashGateway.swf',
+						playlistUrlXML: 'xml/playlist.xml'
+					});
+					// Next line temporary
+					o_fProxy = new FlashProxy(mp.s_flash_lcId, mp.s_fProxyUrlSWF);
+				}
+			);
+			function tellFlash(cmd, val) {
+				// This function temporary
+				o_fProxy.call(cmd, val);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<div id="flash">
+			</div>
+			<div id="controls">
+			</div>
+			<p>Status: <span id="status"></span></p>
+			<p>Volume: <span id="volume"></span></p>
+			<p>Track Name: <span id="trackname"></span></p>
+			<p>Time: <span id="timer"></span> / <span id="tracklen"></span></p>
+		</div>
+		<p>
+			Volume:
+			<a href="javascript:mp.ctrlSetVol(0);">0</a>
+			<a href="javascript:mp.ctrlSetVol(25);">25</a>
+			<a href="javascript:mp.ctrlSetVol(50);">50</a>
+			<a href="javascript:mp.ctrlSetVol(75);">75</a>
+			<a href="javascript:mp.ctrlSetVol(100);">100</a>
+		</p>
+		<p>
+			<a href="javascript:mp.ctrlLoadFile('mp3/track1.mp3', 'With Our Hands (via InstantPlay)');">InstantPlay</a>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <title>
+      onDOMLoad Demo
+    </title>
+    <style>
+    	.status {
+    		font-size: 24px;
+    		color: green;
+    		font-family: impact, arial black, arial, helvetica, sans-serif;
+    	}
+    </style>
+    <script type="text/javascript" language="javascript1.5" src="./THIRD-PARTY%20LIBRARIES/prototype.js"></script>
+    <script type="text/javascript" language="javascript1.5" src="./THIRD-PARTY%20LIBRARIES/EventSelectors.js"></script>
+    <script type="text/javascript" language="javascript1.5" src="./EventSelectors.onDOMLoad.js"></script>
+    <script type="text/javascript" language="javascript1.5">
+    	<!--
+		    EventSelectors.onDOMLoad(function() {
+		    	domLoadTime = new Date();
+		    	status('DOM loaded!');
+		    });
+		    EventSelectors.addLoadEvent(function() {
+		    	pageLoadTime = new Date();
+		    	status('Page loaded!\n\nYou would save '+(pageLoadTime.getTime()-domLoadTime.getTime())+'ms by using onDOMLoad().');
+		    });
+
+		    function status(text) {
+		    	document.getElementsByTagName('body')[0].innerHTML += '<div class="status">'+text+'</div>';
+		    }
+			//-->
+  	</script>
+  </head>
+  <body>
+		<img src="http://justpickone.org/davidtg/PIX/T-G/sunset2.huge.jpg" alt="A huge image that will take a long time to load" height="100" width="100" />
+		<img src="http://justpickone.org/davidtg/PIX/T-G/sunset1.huge.jpg" alt="A huge image that will take a long time to load" height="100" width="100" />
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<title>
+			kHID Demo
+		</title>
+		<style>
+			@import url('css/kWidget.css');
+
+			#testArea {
+				border: 3px solid blue;
+				background-color: #B5BACF;
+				padding-left: 10px;
+				font-family: arial, helvetica, sans-serif;
+			}
+			.state {
+				font-weight: bold;
+			}
+		</style>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/prototype_ss.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/behaviour.js"></script>
+		<script type="text/javascript" language="javascript1.5" src="js/kHID.js"></script>
+		<script type="text/javascript" language="javascript1.5">
+			<!--
+				Behaviour.addLoadEvent(function() {
+					HID.k.observe(function(upDown) {
+						document.getElementById('shift').innerHTML = upDown;
+					}, [16]);
+
+					HID.p.observe({
+						callback: function(event, upDown) {
+							Event.stop(event);
+							document.getElementById('rmouse').innerHTML = upDown;
+						},
+						buttons: ['r']
+					});
+
+					HID.p.observe({
+						callback: function(event, upDown) {
+							Event.stop(event);
+							document.getElementById('context').innerHTML = 'indeed';
+						},
+						buttons: ['contextMenu'],
+						elements: [document.getElementById('contexthotspot')]
+					});
+				});
+
+				function x() {
+					for (var key in HID.k.keys) {
+						if (HID.k.keys[key]) alert(key+': '+HID.k.keys[key]);
+					}
+				}
+			//-->
+		</script>
+	</head>
+	<body>
+		<h1>kHID Demo</h1>
+		<h2>Demo broken for the time being!</h3>
+		<p>Provides a simple way to access state data regarding the Human Interface Devices,
+			namely, the keyboard and pointer. Handles everything else, so all you have to do is
+		ask if a key is up or down. Work in progress.</p>
+		<div id="testArea">
+			<p>SHIFT is <span id="shift" class="state">up</span></p>
+			<p>RIGHT MOUSE BUTTON is <span id="rmouse" class="state">up</span></p>
+			<p>You have <span id="context" class="state">not</span> right-clicked <span id="contexthotspot">HERE</span>.</p>
+			<p onclick="x();" style="cursor: pointer;">Click here to see what keys are down at click time.</a>
+		</div>
+	</body>
+</html>
